@@ -8,7 +8,7 @@ A real-time voting application built with HTML, CSS, JavaScript, and Firebase Re
 - Data syncs across devices using Firebase Realtime Database
 
 ## Demo
-https://your-voting-app-demo.com
+https://sahilsharma2246.github.io/Voting/
 
 ## Installation
 1. Clone the repository: `git clone https://github.com/sahilsharma2246/Voting.git`
