@@ -24,23 +24,23 @@ db.on("value", function (snapshot) {
 
     const data = snapshot.val() || {};
 
-    let sahil = data.Sahil || 0;
-    let sunny = data.Sunny || 0;
-    let rudraksh = data.Rudraksh || 0;
+    let A = data.A || 0;
+    let B = data.B || 0;
+    let C = data.C || 0;
 
-    document.getElementById("Sahil").innerText = sahil;
-    document.getElementById("Sunny").innerText = sunny;
-    document.getElementById("Rudraksh").innerText = rudraksh;
+    document.getElementById("A").innerText = A;
+    document.getElementById("B").innerText = B;
+    document.getElementById("C").innerText = C;
 
     let winner = "No votes yet";
 
-    let maxVotes = Math.max(sahil, sunny, rudraksh);
+    let maxVotes = Math.max(A, B, C);
 
     let winners = [];
 
-    if (sahil === maxVotes && maxVotes !== 0) winners.push("SAHIL");
-    if (sunny === maxVotes && maxVotes !== 0) winners.push("SUNNY");
-    if (rudraksh === maxVotes && maxVotes !== 0) winners.push("RUDRAKSH");
+    if (A === maxVotes && maxVotes !== 0) winners.push("A");
+    if (B === maxVotes && maxVotes !== 0) winners.push("B");
+    if (C === maxVotes && maxVotes !== 0) winners.push("C");
 
     if (winners.length === 1) {
         winner = winners[0];
@@ -57,9 +57,9 @@ function clearVotes() {
 
     if (confirm("Are you sure you want to clear all votes?")) {
         db.set({
-            Sahil: 0,
-            Sunny: 0,
-            Rudraksh: 0
+            A: 0,
+            B: 0,
+            C: 0
         });
     }
 
